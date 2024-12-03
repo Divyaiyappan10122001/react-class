@@ -29,7 +29,7 @@ function FormToastify1() {
         }
         setErrors({ ...errors, [name]: errorMsg });
     };
-
+   // handlechange
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
