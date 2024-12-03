@@ -1,0 +1,62 @@
+// $headColor: blue;
+
+// @mixin div-color {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     background-color: gainsboro;
+//     padding: 5rem;
+// }
+// useeffect toggle style
+@mixin toggle-div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+}
+
+@mixin toggle-button{
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 16px;
+    background-color: #2e7adf;
+    color: white;
+    border-radius: 15px;
+}
+
+@mixin toggle-menu-item{
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 500px;
+    border-radius: 15px;
+    background-color:#f9f9f9;
+}
+
+@mixin toggle-item-list{
+    padding: 10px;
+    border-bottom:1px solid #ddd;
+}
+
+// .head{
+//     color: $headColor;
+// }
+
+// .container {
+//     @include div-color();
+// }
+
+// useeffect toggle style
+
+.toggle{
+    @include toggle-div();
+}
+.toggle-button{
+    @include toggle-button();
+}
+
+.menu-item{
+    @include toggle-menu-item();
+}
+.menu-list{
+    @include toggle-item-list();
+}

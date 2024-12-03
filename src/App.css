@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: teal;
+}
+form{
+    margin: 10% 10%;
+    background-color:#ccc;
+}
+form input{
+
+    border: none;
+    margin: 0.5rem;
+    box-shadow: 5px 2px 10px rgb(179, 178, 178);
+    padding: 0.8rem 4rem;
+    border-radius: 0.3rem;
+}
+
+button{
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: teal;
+    color: white;
+}
+
+ul{
+    margin: 10% 30%;
+    padding: 1rem;
+    background-color:#ccc;
+}
+li{
+    padding: 1rem;
+    list-style: none;
+    background-color: white;
+} 
+
+

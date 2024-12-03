@@ -1,0 +1,104 @@
+/* Variables for styling */
+$sidebar-width: 300px;
+$sidebar-bg: #2c3e50; // Dark navy blue
+$sidebar-text-color: #ecf0f1; // Light grey
+$toggle-btn-color: #34495e; // Slightly lighter navy blue
+$content-bg-color: #f4f6f7; // Off-white
+$content-text-color: #2c3e50; // Dark navy blue
+$transition-duration: 0.3s;
+
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -$sidebar-width;
+  width: $sidebar-width;
+  height: 100%;
+  background-color: $sidebar-bg;
+  color: $sidebar-text-color;
+  overflow-x: hidden;
+  transition: left $transition-duration ease-in-out;
+
+  &.open {
+    left: 0; /* Slide in */
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0;
+
+    li {
+      padding: 10px 20px;
+      border-bottom: 1px solid lighten($sidebar-bg, 10%);
+
+      a {
+        color: $sidebar-text-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Close button inside the sidebar */
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: $sidebar-text-color;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($sidebar-text-color, 20%);
+    }
+  }
+}
+
+/* Toggle Button (outside sidebar) */
+button.toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  background: $toggle-btn-color;
+  color: $sidebar-text-color;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+
+  &:hover {
+    background: darken($toggle-btn-color, 10%);
+  }
+}
+
+/* Content Styles */
+.content {
+  margin: 10%;
+  background-color: $content-bg-color;
+  color: $content-text-color;
+  border-radius: 10px; /* Optional for aesthetic */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: margin-left $transition-duration ease-in-out, background-color $transition-duration, color $transition-duration;
+
+  h1 {
+    color: darken($content-text-color, 20%);
+  }
+
+  p {
+    color: lighten($content-text-color, 10%);
+  }
+
+  &.shifted {
+    margin-left: $sidebar-width;
+  }
+
+  padding: 20px;
+}

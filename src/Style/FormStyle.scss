@@ -1,0 +1,108 @@
+$form-bg-color: #f9f9f9;
+$form-border-color: #ddd;
+$error-color: #e63946;
+$button-color: #007BFF;
+$button-hover-color: darken($button-color, 10%);
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: $form-bg-color;
+  padding: 20px;
+  border: 1px solid $form-border-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color:#007BFF;
+  }
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      padding: 10px;
+      border: 1px solid $form-border-color;
+      border-radius: 5px;
+      font-size: 1rem;
+
+      &:focus {
+        border-color: $button-color;
+        outline: none;
+      }
+    }
+
+    .error {
+      color: $error-color;
+      font-size: 0.85rem;
+    }
+  }
+
+  .form-button {
+    background: $button-color;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: $button-hover-color;
+    }
+  }
+}
+
+.submitted-data {
+  margin-top: 30px;
+
+  h2 {
+    text-align: center;
+    color:#007BFF;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      background: $button-color;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid $form-border-color;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+  }
+
+  .no-data {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+  }
+}
